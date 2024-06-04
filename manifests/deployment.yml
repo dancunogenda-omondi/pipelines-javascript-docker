@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: dancunogendaomondipipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dancunogendaomondipipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: dancunogendaomondipipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: dancunogendaomondipipelinesjavascriptdocker 
+          image: dancunogendaregistry.azurecr.io/dancunogendaomondipipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
